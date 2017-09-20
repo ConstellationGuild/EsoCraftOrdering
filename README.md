@@ -1,4 +1,4 @@
-# EsoCraftOrdering
+.# EsoCraftOrdering
 Allows the ordering and automatic crafting of Elder Scrolls Online Craftable Items.
 
 # Features
@@ -9,4 +9,4 @@ Allows the ordering and automatic crafting of Elder Scrolls Online Craftable Ite
 - Get costing / pricing listing from supported Trade Addons
 
 # Addon suggestions
-If you have any suggestions or requests for this addon please create an issue. When we are published we will move all feature requests to the ESO UI page for the Addon
+If you have any suggestions or requests for this addon please create an issue. When we are published we will move all feature requests to the ESO UI page for the Addon.
