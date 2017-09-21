@@ -1,0 +1,10 @@
+## APIVersion: 100015
+## Title: LibFilterIt-1.0
+## Version: 1.0 r2
+## Author: Circonian
+## Description: A library used to aid in gathering filtering items.
+
+
+LibStub\LibStub.lua
+
+LibFilterIt-1.0.lua
