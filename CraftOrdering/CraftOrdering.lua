@@ -49,7 +49,7 @@ end
 ------------------------------------------------------------------
 --  Debug mode output to chat  --
 ------------------------------------------------------------------
-local function ECO.d(t)
+function ECO.d(t)
   if ECO.debug then
     d(t)
   end
