@@ -4,13 +4,17 @@
 
 -- Longhand object for addon settings
 CraftOrdering = {}
-CraftOrdering.loadedAddons = {}
-
-local CraftOrderingDefaultVars = {
+CraftOrdering.loadedAddons = {
 }
 
 -- Shorthand object
 ECO = {}
+
+-------------------------------------------------------------------------
+-- Locals --
+-------------------------------------------------------------------------
+local CraftOrderingDefaultVars = {
+}
 
 -------------------------------------------------------------------------
 --  Initialize Variables --
@@ -34,8 +38,8 @@ local red = "|cFF0000"
 --  OnAddOnLoaded  --
 ------------------------------------------------------------------
 local function OnAddOnLoaded(_event, addonName)
-	if addonName == CraftOrdering.name then
-	  CraftOrdering:Initialize()
+  if addonName == CraftOrdering.name then
+    CraftOrdering:Initialize()
 	else
 		CraftOrdering.loadedAddons[addonName] = true
 	end
