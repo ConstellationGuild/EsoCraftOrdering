@@ -60,7 +60,7 @@ end
 ------------------------------------------------------------------
 local function OnPlayerActivated(eventCode)
   if ECO.loaded then return end
-  ECO.d(orange .. "CraftOrdering Loaded")
+  ECO.d(green .. "CraftOrdering Loaded")
   ECO.loaded = true
 end
 
