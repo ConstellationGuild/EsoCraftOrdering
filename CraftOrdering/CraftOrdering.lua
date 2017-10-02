@@ -69,6 +69,9 @@ end
 ------------------------------------------------------------------
 function CraftOrdering:Initialize()
   EVENT_MANAGER:RegisterForEvent(CraftOrdering.name, EVENT_PLAYER_ACTIVATED, OnPlayerActivated)
+  if ECO.debug then
+    CraftOrdering:ExecuteUnitTests()
+  end
 end
 
 ----------------------------------------------------------------------

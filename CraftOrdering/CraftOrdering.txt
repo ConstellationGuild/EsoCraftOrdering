@@ -6,3 +6,5 @@
 ## Description: CraftOrdering Allows the ordering and automatic crafting of Elder Scrolls Online Craftable Items.
 
 CraftOrdering.lua
+HelperMethods.lua
+UnitTesting.lua
