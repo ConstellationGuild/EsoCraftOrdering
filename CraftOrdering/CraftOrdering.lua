@@ -30,9 +30,9 @@ CraftOrdering.RealVersion = 1.0
 ECO.loaded = false
 ECO.debug = true
 
-local orange = "|cFFA400"
-local green = "|c00A400"
-local red = "|cFF0000"
+ECO.orange = "|cFFA400"
+ECO.green = "|c00A400"
+ECO.red = "|cFF0000"
 
 ------------------------------------------------------------------
 --  OnAddOnLoaded  --
@@ -47,20 +47,16 @@ local function OnAddOnLoaded(_event, addonName)
 end
 
 ------------------------------------------------------------------
---  Debug mode output to chat  --
-------------------------------------------------------------------
-function ECO.d(t)
-  if ECO.debug then
-    d(t)
-  end
-end
-
-------------------------------------------------------------------
 --  OnPlayerActivated  --
 ------------------------------------------------------------------
 local function OnPlayerActivated(eventCode)
   if ECO.loaded then return end
-  ECO.d(green .. "CraftOrdering Loaded")
+  ECO.d(ECO.green .. "CraftOrdering Loaded")
+
+  if ECO.debug then
+    CraftOrdering:ExecuteUnitTests()
+  end
+  
   ECO.loaded = true
 end
 
@@ -69,9 +65,6 @@ end
 ------------------------------------------------------------------
 function CraftOrdering:Initialize()
   EVENT_MANAGER:RegisterForEvent(CraftOrdering.name, EVENT_PLAYER_ACTIVATED, OnPlayerActivated)
-  if ECO.debug then
-    CraftOrdering:ExecuteUnitTests()
-  end
 end
 
 ----------------------------------------------------------------------
