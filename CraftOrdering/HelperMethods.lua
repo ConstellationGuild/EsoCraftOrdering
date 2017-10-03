@@ -1,7 +1,23 @@
 ------------------------------------------------------------------
 --  Serialisation Helpers  --
 ------------------------------------------------------------------
-function CraftOrdering:Serialize(t)
+function table.isArray(tbl)
+  if tbl[0] ~= nil then
+    local lastNumber = 0
+    -- Check table indexes to see if array
+    for i,v in tbl do
+      local t = type(i)
+      if t ~= "number" then return false end
+      -- Maximum index spread of 100
+      if i > (lastNumber + 100) then return false end
+      lastNumber = i
+    end
+    return true
+  end
+  return false
+end
+
+function ECO.Serialize(t)
   local mark={}
   local assign={}
 
@@ -77,7 +93,7 @@ end
 
 local EMPTY_TABLE = {}
  
-function  CraftOrdering:Deserialize(str)
+function  ECO.Deserialize(str)
   if str == nil or str == "nil" then
     return nil
   elseif type(str) ~= "string" then
