@@ -4,11 +4,8 @@
 ------------------------------------------------------------------
 function Serialisation()
   local testObject = {["one"]="one", ["two"]="two"}
-  local outout = ECO.Serialize(testObject)
-  if output ~= nil then
-    ECO.d(ECO.red..output)
-  end
-  local condition = output == "{\"one\",\"two\"}"
+  local serialisedObject = ECO.Serialize(testObject)
+  local condition = serialisedObject == "{two=\"two\",one=\"one\"}"
   return condition == true
 end
 
@@ -33,7 +30,7 @@ function CraftOrdering:ExecuteUnitTests()
     else
       ECO.d(ECO.red.."Unit test " .. i .. " failed")
     end
-    
+
   end
   d(ECO.green.."Unit Testing Complete")
 end

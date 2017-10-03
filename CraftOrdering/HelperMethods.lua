@@ -80,7 +80,6 @@ function ECO.Serialize(t)
         end
       end
     end
-
     return "{"..table.concat(ret,",").."}"
   end
 
