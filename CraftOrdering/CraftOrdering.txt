@@ -29,5 +29,5 @@ HelperMethods.lua
 
 UnitTesting.lua
 
-bindings.xml
+Bindings.xml
 CraftOrdering.xml

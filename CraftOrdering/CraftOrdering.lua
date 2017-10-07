@@ -56,9 +56,6 @@ local function OnPlayerActivated(eventCode)
   if ECO.debug then
     CraftOrdering:ExecuteUnitTests()
   end
-
-  CraftOrderingPanel:SetHidden(false)
-
   ECO.loaded = true
 end
 
@@ -66,6 +63,7 @@ end
 --  Initialize Function --
 ------------------------------------------------------------------
 function CraftOrdering:Initialize()
+  ZO_CreateStringId("SI_BINDING_NAME_SHOW_ECO", "Open Craft Ordering Panel")
   EVENT_MANAGER:RegisterForEvent(CraftOrdering.name, EVENT_PLAYER_ACTIVATED, OnPlayerActivated)
 end
 

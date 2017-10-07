@@ -3,18 +3,14 @@
 		<TopLevelControl name="CraftOrderingPanel" hidden="true">
 			<Dimensions x="400" y="400" />
 			<Anchor point="CENTER" />
-            
-			<OnUpdate>
-                CraftOrderingPanelUpdate()
-            </OnUpdate>
- 
+             
             <OnInitialized>
                 CraftOrderingPanelInitialize()
             </OnInitialized>
 
             <Controls>
                 <Backdrop name="$(parent)BG" inherits="ZO_ThinBackdrop" />
-                <Label name="$(parent)Counter" font="ZoFontWindowTitle" color="CFDCBD" wrapMode="ELLIPSIS" verticalAlignment="CENTER" text="Craft Ordering">
+                <Label name="$(parent)Counter" font="ZoFontWindowTitle" color="CFDCBD" wrapMode="ELLIPSIS" verticalAlignment="TOP" text="Craft Ordering">
                     <AnchorFill />
                 </Label>
             </Controls>
