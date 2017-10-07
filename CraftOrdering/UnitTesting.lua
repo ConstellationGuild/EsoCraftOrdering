@@ -5,7 +5,7 @@
 function Serialisation()
   local testObject = {["one"]="one", ["two"]="two"}
   local serialisedObject = ECO.Serialize(testObject)
-  local condition = serialisedObject == "{two=\"two\",one=\"one\"}"
+  local condition = serialisedObject:find("two=\"two\"") ~= nil and serialisedObject:find("one=\"one\"") ~=nil
   return condition == true
 end
 

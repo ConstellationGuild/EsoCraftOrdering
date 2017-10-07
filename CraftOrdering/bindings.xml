@@ -1,0 +1,10 @@
+<Bindings>
+	<Layer name="SI_KEYBINDINGS_LAYER_GENERAL">
+		<Category name="CraftOrdering">
+			<Action name="CRAFTORDERING_SHOW_PANEL">
+				<Down></Down>
+				<Up>ECO.bindings:Toggle()</Up>
+			</Action>
+		</Category>
+	</Layer>
+</Bindings>

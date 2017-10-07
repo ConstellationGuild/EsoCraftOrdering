@@ -56,7 +56,9 @@ local function OnPlayerActivated(eventCode)
   if ECO.debug then
     CraftOrdering:ExecuteUnitTests()
   end
-  
+
+  CraftOrderingPanel:SetHidden(false)
+
   ECO.loaded = true
 end
 
