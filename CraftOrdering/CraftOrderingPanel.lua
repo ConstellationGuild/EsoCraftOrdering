@@ -3,7 +3,8 @@ end
 
 function CraftOrderingPanelInitialize()
 end
-
+local hidden = true;
 function CraftOrderingPanelShow()
-  CraftOrderingPanel:SetHidden(false)
+  hidden = not hidden;
+  CraftOrderingPanel:SetHidden(hidden)
 end
