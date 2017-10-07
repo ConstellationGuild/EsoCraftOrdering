@@ -1,8 +1,5 @@
-Panel = {}
-CraftOrdering.panel = panel
-
-function Panel:Initialize()
+function CraftOrderingPanelUpdate()
 end
 
-function Panel:Update()
+function CraftOrderingPanelInitialize()
 end

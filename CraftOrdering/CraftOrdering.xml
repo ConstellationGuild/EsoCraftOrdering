@@ -1,19 +1,20 @@
 <GuiXml>
 	<Controls>
 		<TopLevelControl name="CraftOrderingPanel" hidden="true">
-			<Dimensions x="200" y="42" />
+			<Dimensions x="400" y="400" />
+			<Anchor point="CENTER" />
             
 			<OnUpdate>
-                CraftOrdering.panel:Update()
+                CraftOrderingPanelUpdate()
             </OnUpdate>
  
             <OnInitialized>
-                CraftOrdering.panel:Initialize()
+                CraftOrderingPanelInitialize()
             </OnInitialized>
 
             <Controls>
                 <Backdrop name="$(parent)BG" inherits="ZO_ThinBackdrop" />
-                <Label name="$(parent)Counter" font="ZoFontWindowTitle" color="CFDCBD" wrapMode="ELLIPSIS" verticalAlignment="CENTER" text="Counter: ">
+                <Label name="$(parent)Counter" font="ZoFontWindowTitle" color="CFDCBD" wrapMode="ELLIPSIS" verticalAlignment="CENTER" text="Craft Ordering">
                     <AnchorFill />
                 </Label>
             </Controls>
