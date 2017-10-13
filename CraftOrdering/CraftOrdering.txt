@@ -26,6 +26,7 @@ Libs/LibMainMenu/LibMainMenu.lua
 CraftOrdering.lua
 CraftOrderingPanel.lua
 HelperMethods.lua
+CraftOrderingConstants.lua
 
 UnitTesting.lua
 

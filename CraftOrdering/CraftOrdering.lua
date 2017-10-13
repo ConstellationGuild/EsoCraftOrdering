@@ -2,13 +2,17 @@
 -- Globals --
 -------------------------------------------------------------------------
 
+-- Using object or {} pattern to ensure object
+-- creation regardless of load order
+
 -- Longhand object for addon settings
-CraftOrdering = {}
+CraftOrdering = CraftOrdering or {}
+
 CraftOrdering.loadedAddons = {
 }
 
 -- Shorthand object
-ECO = {}
+ECO = ECO or {}
 
 -------------------------------------------------------------------------
 -- Locals --
@@ -29,6 +33,11 @@ CraftOrdering.RealVersion = 1.0
 
 ECO.loaded = false
 ECO.debug = true
+
+-- Pending orders ready for auto crafting at stations
+ECO.pendingOrders = {}
+-- Saved variables
+ECO.savedVariables = {}
 
 ECO.orange = "|cFFA400"
 ECO.green = "|c00A400"
